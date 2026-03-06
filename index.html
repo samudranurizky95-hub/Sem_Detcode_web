@@ -458,65 +458,51 @@
 </body>
   </html>
   
-function checkMaintenance() {
-    const now = new Date();
-
-    const start = new Date("2026-03-07T06:22:00");
-    const end = new Date("2026-03-07T06:30:00");
-
-    if (now >= start && now <= end) {
-        document.body.innerHTML = `
-        <style>
-        body{
-            background:#000;
-            color:#00ff00;
-            font-family:monospace;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-            text-align:center;
-            flex-direction:column;
-        }
-
-        .glitch{
-            font-size:80px;
-            font-weight:bold;
-            animation:glitch 1s infinite;
-        }
-
-        @keyframes glitch{
-            0%{text-shadow:2px 2px red;}
-            25%{text-shadow:-2px -2px cyan;}
-            50%{text-shadow:2px -2px lime;}
-            75%{text-shadow:-2px 2px magenta;}
-            100%{text-shadow:2px 2px red;}
-        }
-
-        .scan{
-            width:100%;
-            height:2px;
-            background:#00ff00;
-            position:absolute;
-            animation:scan 2s linear infinite;
-        }
-
-        @keyframes scan{
-            0%{top:0;}
-            100%{top:100%;}
-        }
-        </style>
-
-        <div class="scan"></div>
-
-        <div class="glitch">404</div>
-        <h2>SYSTEM ERROR</h2>
-        <p>Web Sedang Error</p>
-        <p>Kami sedang memperbaiki sistem...</p>
-        <p>Silakan kembali setelah 06:30</p>
-
-        `;
-    }
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>System Error</title>
+<style>
+body{
+    background:black;
+    color:#00ff00;
+    font-family:"Courier New", monospace;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+    text-align:center;
 }
 
-checkMaintenance();
+.box{
+    border:2px solid #00ff00;
+    padding:40px;
+    box-shadow:0 0 20px #00ff00;
+}
+
+h1{
+    font-size:40px;
+}
+
+.time{
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>⚠ ERROR 404</h1>
+    <p>Website Tidak Bisa Digunakan</p>
+    <p>Silakan coba lagi nanti</p>
+
+    <div class="time">
+        Waktu Error: 07 Maret 2026 - 06:00
+    </div>
+</div>
+
+</body>
+</html>
