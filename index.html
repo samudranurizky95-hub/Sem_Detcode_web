@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="galaxy-bg"></div>
+<div class="stars" id="stars"></div>
+<div class="planet planet1"></div>
+<div class="planet planet2"></div>
+<div class="aurora"></div>
+
+<div class="container">
+    <h1>GET Code Generator</h1>
+
+    <div class="input-section">
+        <div class="input-group">
+            <input type="url" id="urlInput" placeholder="Masukkan URL (wajib https://)" required>
+            <button onclick="generateCode()">Generate Code</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="loader"></div>
+            <p style="margin-top:10px;color:rgba(255,255,255,.7)">Mengambil kode dari galaksi...</p>
+        </div>
+    </div>
+
+    <div class="result-section" id="resultSection">
+        <div class="glowing-border"></div>
+
+        <div class="result-header">
+            <div class="result-meta">
+                <span id="creator">Creator : -</span>
+                <span id="status">Status : -</span>
+            </div>
+        </div>
+
+        <div class="result-content">
+            <button class="copy-button" onclick="copyCode()">Salin Kode</button>
+            <button class="download-button" onclick="downloadCode()">Download HTML</button>
+            <pre class="code-output" id="codeOutput"></pre>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
